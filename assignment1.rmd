@@ -1,0 +1,7 @@
+####Introduction--
+#The goal for this assignment is to assemble and perform a variant calling analysis, which could then be visualized.
+#Through the use of Salmonella enterica raw reads from an Oxford Nanopore sequencer, this work aims to assemble a consensus genome of high quality through read processing and long read assembly methods.
+#The generated genome would then be compared to a reference genome from NCBI for Salmonella enterica to perform a variant calling analysis, which could be visualized. 
+
+
+
