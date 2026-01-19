@@ -10,15 +10,25 @@ A quality control tool was chosen to identify the condition of the raw Nanopore 
 
 ## Proposed Methods
 
+### Read Acquisition 
+
 The data collected from NCBI contained Nanopore long-reads in the FASTQ format. Further analysis was conducted on the Compute Canada Fir cluster. Assembly and analysis tools were installed through the miniconda (v. 25.11.1) package manager through the Ubuntu terminal. A complete Salmonella enterica reference genome was retrieved from the NCBI database and used for alignment. 
 
+### Read Processing
+
 Raw Nanopore reads were assessed for quality using NanoPlot (v. 1.46.2) with parameter `--fastq` (De Coster et al., 2018). Nanopack (v. 1.1.1) was used for further read edits as necessary (De Coster et al., 2018). 
+
+### Genome Assembly and Polishing 
 
 Genome assembly was performed through the use of Flye and default parameters (v. 2.9.6) (Kolmogorov et al., 2019). 
 
 Polishing was done through the use of Medaka (v. 2.1.1) (Oxford Nanopore Technologies, 2025). 
 
+### Genome Alignment
+
 In order to align the assembled genome to the reference, minimap2 was used with the `-ax asm5` flag (v. 2.30), the alignments were then converted to BAM using samtools (v. 1.23) (Li, 2018);(Li et al., 2009). 
+
+### Result Visualisation
 
 Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (Robinson et al., 2011) through the transfer of files locally. 
 
