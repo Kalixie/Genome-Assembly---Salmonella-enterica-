@@ -6,7 +6,7 @@ Through the use of Salmonella enterica raw reads from an Oxford Nanopore sequenc
 
 Genome assembly can pose challenges such as ensuring accuracy with genome construction, especially when further analysis requires a high-quality genome. Long-read sequences tend to have higher error rates compared to short-read sequences, although recent improvements have led to more accurate results with long-read data alone through Oxford Nanopore sequencing (Zhao et al., 2023). Computational demands may also slow the progress of genome assembly and further analysis, so a pipeline with optimally balanced tools should be considered.
 
-A quality control tool was chosen to identify the condition of the raw Nanopore reads before further assembly and analysis were conducted. NanoPack was chosen due to its specific purpose of processing Nanopore reads, along with the inclusion of Nanoplot for data analysis (De Coster, 2018). A recent study looking at the use of Oxford nanopore long-read sequencing for genome assembly found that for a 5 Mb bacterial genome, accuracies of over 99.99% were achieved through the usage of Flye and Medaka for assembly and polishing (Zhao et al., 2023). Another study looking at the Salmonella enterica genome across 341 strains found that the average lengths of genomes ranged from 4.50 to 5.15 Mb, within the range of 5 Mb for high accuracy scores through Flye and Medaka (Lyu et al., 2021). Therefore, the combination of Flye and Medaka was considered for this project. Other assembly tools, such as Canu and NECAT, also deliver accurate results in comparison studies, however potentially lead to slower processing times (Kumar et al., 2025). Minimap2 was chosen as the aligner for this project as it is considered to be high-performance for Nanopore reads, although studies have identified potential improvements for speed (Sadasivan, 2023). Overall, this approach aims to provide a practical pipeline for comparing assembled and referenced genomes.
+A quality control tool was chosen to identify the condition of the raw Nanopore reads before further assembly and analysis were conducted. NanoPack was chosen due to its specific purpose of processing Nanopore reads, along with the inclusion of Nanoplot for data analysis (De Coster, 2018). A recent study looking at the use of Oxford nanopore long-read sequencing for genome assembly found that for a 5 Mb bacterial genome, accuracies of over 99.99% were achieved through the usage of Flye and Medaka for assembly and polishing (Zhao et al., 2023). Another study looking at the Salmonella enterica genome across 341 strains found that the average lengths of genomes ranged from 4.50 to 5.15 Mb, within the range of 5 Mb for high accuracy scores through Flye and Medaka (Lyu et al., 2021). Therefore, the combination of Flye and Medaka was considered for this project. Other assembly tools, such as Canu and NECAT, also deliver accurate results in comparison studies, however potentially lead to slower processing times (Kumar et al., 2025). Minimap2 was chosen as the aligner for this project as it is considered to be high-performance for Nanopore reads, although studies have identified potential improvements for speed (Sadasivan, 2023). Clair3, a deep learning tool designed for long-read sequencing data, was used to perform variant calling and has performed highly in previous studies compared to previous techniques (Hall et al., 2024). Overall, this approach aims to provide a practical pipeline for comparing assembled and referenced genomes. 
 
 ## Proposed Methods
 
@@ -28,6 +28,10 @@ Polishing was done through the use of Medaka (v. 2.1.1) (Oxford Nanopore Technol
 
 In order to align the assembled genome to the reference, minimap2 was used with the `-ax asm5` flag (v. 2.30), the alignments were then converted to BAM using samtools (v. 1.23) (Li, 2018);(Li et al., 2009). 
 
+### Variant Calling
+
+Variant calling between raw reads and the reference assembly was performed through the usage of clair3 (v. 1.20) installed through miniconda for further analysis of the reads. 
+
 ### Result Visualisation
 
 Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (Robinson et al., 2011) through the transfer of files locally. 
@@ -37,6 +41,8 @@ Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (
 Anaconda Inc. (2025). Miniconda (Version 25.11.1). Anaconda.
 
 De Coster, W., D’Hert, S., Schultz, D. T., Cruts, M., & Van Broeckhoven, C. (2018). NanoPack: Visualizing and processing long-read sequencing data. Bioinformatics, 34(15), 2666–2669. https://doi.org/10.1093/bioinformatics/bty149
+
+Hall MB, Wick RR, Judd LM, Nguyen AN, Steinig EJ, Xie O, Davies M, Seemann T, Stinear TP, Coin L. Benchmarking reveals superiority of deep learning variant callers on bacterial nanopore sequence data. Elife. 2024 Oct 10;13:RP98300. doi: 10.7554/eLife.98300 PMID: 39388235; PMCID: PMC11466455
 
 Kolmogorov, M., Yuan, J., Lin, Y., & Pevzner, P. A. (2019). Assembly of long, error-prone reads using repeat graphs. Nature Biotechnology, 37(5), 540–546. https://doi.org/10.1038/s41587-019-0072-8
 
