@@ -30,7 +30,7 @@ In order to align the assembled genome to the reference, minimap2 was used with 
 
 ### Variant Calling
 
-Variant calling between raw reads and the reference assembly was performed through the usage of clair3 (v. 1.20) installed through miniconda for further analysis of the reads. 
+Variant calling between raw reads and the reference assembly was performed through the usage of clair3 (v. 1.20) installed through miniconda for further analysis of the reads (Zheng et al., 2022). 
 
 ### Result Visualisation
 
@@ -61,5 +61,7 @@ Robinson, J. T., Thorvaldsdóttir, H., Winckler, W., Guttman, M., Lander, E. S.,
 Sadasivan, H., Maric, M., Dawson, E., Iyer, V., Israeli, J., & Narayanasamy, S. (2023). Accelerating Minimap2 for Accurate Long Read Alignment on GPUs. Journal of biotechnology and biomedicine, 6(1), 13–23. https://doi.org/10.26502/jbb.2642-91280067
 
 Zhao, W., Zeng, W., Pang, B., Luo, M., Peng, Y., Xu, J., Kan, B., Li, Z., & Lu, X. (2023). Oxford nanopore long-read sequencing enables the generation of complete bacterial and plasmid genomes without short-read sequencing. Frontiers in microbiology, 14, 1179966. https://doi.org/10.3389/fmicb.2023.1179966
+
+Zheng, Z., Li, S., Su, J., Leung, A. W., Lam, T. W., & Luo, R. (2022). Symphonizing pileup and full-alignment for deep learning-based long-read variant calling. Nature computational science, 2(12), 797–803. https://doi.org/10.1038/s43588-022-00387-x
 
 
