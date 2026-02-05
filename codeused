@@ -1,4 +1,5 @@
-# Setup Conda Environments
+
+# Setup Conda Enviroments
 
 conda create -n nanoplot nanoplot=1.46.2 nanopack=1.1.1 -y
 
@@ -20,5 +21,28 @@ flye --nano-raw SRR32410565.fastq --out-dir flyeassembly --threads 16
 
 # Run medaka
 
-medaka_consensus -i SRR32410565.fastq -d flyeassembly/assembly.fasta -o medaka_polish -t 2 -m r1041_e82_400bps_sup_v5.2.0
+medaka_consensus -i SRR32410565.fastq -d flyeassembly/assembly.fasta -o medakapolish -t 2 -m r1041_e82_400bps_sup_v5.2.0
+
+# Collect the Reference genome
+
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/945/GCF_000006945.2_ASM694v2/GCF_000006945.2_ASM694v2_genomic.fna.gz
+
+gunzip *.gz
+
+mv GCF_000006945.2_ASM694v2_genomic.fna samref.fasta
+
+# Run minimap2 
+
+minimap2 -ax asm5 samref.fasta medaka_polish/consensus.fasta > comparisonalign.sam
+
+# Samtools 
+
+samtools view -bS comparisonalign.sam > comparisonalign.bam
+
+samtools sort comparisonalign.bam -o comparisonalign.sorted.bam
+
+samtools index comparisonalign.sorted.bam
+
+# Run clair3
+
 
