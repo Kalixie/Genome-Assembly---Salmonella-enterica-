@@ -1,0 +1,24 @@
+# Setup Conda Environments
+
+conda create -n nanoplot nanoplot=1.46.2 nanopack=1.1.1 -y
+
+conda create -n flydaka flye=2.9.6 medaka=2.1.1 -y
+
+conda create -n minisam minimap2=2.30 samtools=1.23 -y
+
+conda create -n clair clair3=1.2.0 -y
+
+# Run Nanoplot
+
+conda activate nanoplot
+
+NanoPlot --fastq SRR32410565.fastq --outdir nanoplotresults --threads 8
+
+# Run Flye
+
+flye --nano-raw SRR32410565.fastq --out-dir flyeassembly --threads 16
+
+# Run medaka
+
+medaka_consensus -i SRR32410565.fastq -d flyeassembly/assembly.fasta -o medaka_polish -t 2 -m r1041_e82_400bps_sup_v5.2.0
+
