@@ -1,11 +1,13 @@
 
-# Setup Conda Enviroments
+# Setup Conda Environments
 
 conda create -n nanoplot nanoplot=1.46.2 nanopack=1.1.1 -y
 
 conda create -n flydaka flye=2.9.6 medaka=2.1.1 -y
 
 conda create -n minisam minimap2=2.30 samtools=1.23 -y
+
+conda create -n quast quast=5.3.0 -y
 
 conda create -n clair clair3=1.2.0 -y
 
@@ -17,6 +19,8 @@ NanoPlot --fastq SRR32410565.fastq --outdir nanoplotresults --threads 8
 
 # Run Flye
 
+conda activate flydaka
+
 flye --nano-raw SRR32410565.fastq --out-dir flyeassembly --threads 16
 
 # Run medaka
@@ -27,13 +31,15 @@ medaka_consensus -i SRR32410565.fastq -d flyeassembly/assembly.fasta -o medakapo
 
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/945/GCF_000006945.2_ASM694v2/GCF_000006945.2_ASM694v2_genomic.fna.gz
 
-gunzip *.gz
+gunzip GCF_000006945.2_ASM694v2_genomic.fna.gz
 
 mv GCF_000006945.2_ASM694v2_genomic.fna samref.fasta
 
 # Run minimap2 
 
-minimap2 -ax asm5 samref.fasta medaka_polish/consensus.fasta > comparisonalign.sam
+conda activate minisam
+
+minimap2 -ax asm5 samref.fasta medakapolish/consensus.fasta > comparisonalign.sam
 
 # Samtools 
 
@@ -43,6 +49,24 @@ samtools sort comparisonalign.bam -o comparisonalign.sorted.bam
 
 samtools index comparisonalign.sorted.bam
 
-# Run clair3
+# Quast on assembly and reference
 
+conda activate quast
 
+quast medakapolish/consensus.fasta -r samref.fasta -o quastresults
+
+# Align raw reads and Run clair3
+
+conda activate minisam
+
+minimap2 -ax map-ont samref.fasta SRR32410565.fastq
+
+samtools sort SRR32410565.fastq -o readsref.sorted.bam
+
+samtools index readsref.sorted.bam
+
+samtools faidx samref.fasta
+
+conda activate clair
+
+$CONDA_PREFIX/bin/run_clair3.sh --bam_fn readsref.sorted.bam --ref_fn samref.fasta --output clair3output --threads 16 --platform ont --model_path $CONDA_PREFIX/bin/models/ont --include_all_ctgs 
