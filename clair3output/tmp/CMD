@@ -1,1 +1,0 @@
-/home/nadira/miniconda3/envs/clair/bin/run_clair3.sh --bam_fn readsref.sorted.bam --ref_fn samref.fasta --output clair3output --threads 16 --platform ont --model_path /home/nadira/miniconda3/envs/clair/bin/models/ont --include_all_ctgs

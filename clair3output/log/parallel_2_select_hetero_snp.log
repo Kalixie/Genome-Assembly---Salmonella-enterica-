@@ -1,3 +1,0 @@
-Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
-2	:	1770398106.735	     0.198	0	67	0	0	pypy3 /home/nadira/miniconda3/envs/clair/bin/scripts/../clair3.py SelectHetSnp         --vcf_fn /home/nadira/BINF6110/assignment1/clair3output/pileup.vcf.gz         --split_folder /home/nadira/BINF6110/assignment1/clair3output/tmp/phase_output/phase_vcf         --ctgName NC_003197.2
-1	:	1770398106.732	     0.202	0	65	0	0	pypy3 /home/nadira/miniconda3/envs/clair/bin/scripts/../clair3.py SelectHetSnp         --vcf_fn /home/nadira/BINF6110/assignment1/clair3output/pileup.vcf.gz         --split_folder /home/nadira/BINF6110/assignment1/clair3output/tmp/phase_output/phase_vcf         --ctgName NC_003277.2
