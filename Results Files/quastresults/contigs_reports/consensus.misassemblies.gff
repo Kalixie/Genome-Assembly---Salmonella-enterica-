@@ -1,0 +1,21 @@
+##gff-version 3
+contig_2	QUAST	possible_assembly_error	638099	669978	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -31976
+contig_2	QUAST	possible_assembly_error	1131671	1159876	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -12489
+contig_2	QUAST	possible_assembly_error	1182109	1182110	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 33693
+contig_6	QUAST	possible_assembly_error	14583	15369	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -518957
+contig_6	QUAST	possible_assembly_error	16152	18446	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 769158
+contig_4	QUAST	possible_assembly_error	8417	8418	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 7986
+contig_4	QUAST	possible_assembly_error	262500	275461	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -271544
+contig_3	QUAST	possible_assembly_error	124430	205117	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -80741
+contig_3	QUAST	possible_assembly_error	277465	277466	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 930819
+contig_3	QUAST	possible_assembly_error	278174	278175	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 1003166
+contig_3	QUAST	possible_assembly_error	865409	883801	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -18409
+contig_3	QUAST	possible_assembly_error	1030028	1030029	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 1530528
+contig_3	QUAST	possible_assembly_error	1030737	1030738	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 1171482
+contig_3	QUAST	possible_assembly_error	1389630	1389631	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 1171480
+contig_3	QUAST	possible_assembly_error	1390339	1390340	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 1083043
+contig_3	QUAST	possible_assembly_error	1478773	1478774	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 42723
+contig_5	QUAST	possible_assembly_error	138545	138546	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 1146498
+contig_5	QUAST	possible_assembly_error	139254	139255	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -1147209
+contig_5	QUAST	possible_assembly_error	208196	208197	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -511878
+contig_5	QUAST	possible_assembly_error	208905	208906	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is 511167

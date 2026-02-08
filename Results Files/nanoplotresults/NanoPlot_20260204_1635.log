@@ -1,0 +1,58 @@
+2026-02-04 16:35:56,460 NanoPlot 1.46.2 started with arguments Namespace(threads=8, verbose=False, store=False, raw=False, huge=False, outdir='nanoplotresults', no_static=False, prefix='', tsv_stats=False, only_report=False, info_in_report=False, maxlength=None, minlength=None, drop_outliers=False, downsample=None, loglength=False, percentqual=False, alength=False, minqual=None, runtime_until=None, readtype='1D', barcoded=False, no_supplementary=False, color='#4CB391', colormap='Greens', format=['png'], plots=['kde', 'dot'], legacy=None, listcolors=False, listcolormaps=False, no_N50=False, N50=False, title=None, font_scale=1, dpi=300, hide_stats=False, fastq=['SRR32410565.fastq.gz'], fasta=None, fastq_rich=None, fastq_minimal=None, summary=None, bam=None, ubam=None, cram=None, pickle=None, feather=None, path='nanoplotresults/')
+2026-02-04 16:35:56,460 Python version is: 3.12.12 | packaged by conda-forge | (main, Jan 26 2026, 23:51:32) [GCC 14.3.0]
+2026-02-04 16:35:57,033 Nanoget: Starting to collect statistics from plain fastq file.
+2026-02-04 16:35:57,034 Nanoget: Decompressing gzipped fastq SRR32410565.fastq.gz
+2026-02-04 16:36:06,893 Compressed file ended before the end-of-stream marker was reached
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/concurrent/futures/process.py", line 264, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/concurrent/futures/process.py", line 213, in _process_chunk
+    return [fn(*args) for args in chunk]
+            ^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/site-packages/nanoget/extraction_functions.py", line 392, in process_fastq_plain
+    data=[res for res in extract_from_fastq(inputfastq) if res],
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/site-packages/nanoget/extraction_functions.py", line 403, in extract_from_fastq
+    for rec in SeqIO.parse(fq, "fastq"):
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/site-packages/Bio/SeqIO/QualityIO.py", line 1070, in __next__
+    for line in self.stream:
+                ^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/gzip.py", line 351, in read1
+    return self._buffer.read1(size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/gzip.py", line 564, in read
+    raise EOFError("Compressed file ended before the "
+EOFError: Compressed file ended before the end-of-stream marker was reached
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/site-packages/nanoplot/NanoPlot.py", line 61, in main
+    datadf = get_input(
+             ^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/site-packages/nanoget/nanoget.py", line 110, in get_input
+    dfs=[out for out in executor.map(extraction_function, files)],
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/concurrent/futures/process.py", line 636, in _chain_from_iterable_of_lists
+    for element in iterable:
+                   ^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/nadira/miniconda3/envs/nanoplot/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+EOFError: Compressed file ended before the end-of-stream marker was reached

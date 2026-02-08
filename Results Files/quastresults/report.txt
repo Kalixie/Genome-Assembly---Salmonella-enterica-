@@ -1,0 +1,57 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     consensus 
+# contigs (>= 0 bp)          9         
+# contigs (>= 1000 bp)       9         
+# contigs (>= 5000 bp)       9         
+# contigs (>= 10000 bp)      9         
+# contigs (>= 25000 bp)      8         
+# contigs (>= 50000 bp)      7         
+Total length (>= 0 bp)       5094702   
+Total length (>= 1000 bp)    5094702   
+Total length (>= 5000 bp)    5094702   
+Total length (>= 10000 bp)   5094702   
+Total length (>= 25000 bp)   5078864   
+Total length (>= 50000 bp)   5044103   
+# contigs                    9         
+Largest contig               1576437   
+Total length                 5094702   
+Reference length             4951383   
+GC (%)                       52.21     
+Reference GC (%)             52.24     
+N50                          1254241   
+NG50                         1254241   
+N90                          389055    
+NG90                         389055    
+auN                          1070495.3 
+auNG                         1101481.1 
+L50                          2         
+LG50                         2         
+L90                          5         
+LG90                         5         
+# misassemblies              20        
+# misassembled contigs       5         
+Misassembled contigs length  4466423   
+# local misassemblies        8         
+# scaffold gap ext. mis.     0         
+# scaffold gap loc. mis.     0         
+# unaligned mis. contigs     0         
+# unaligned contigs          1 + 7 part
+Unaligned length             361994    
+Genome fraction (%)          95.391    
+Duplication ratio            1.002     
+# N's per 100 kbp            0.00      
+# mismatches per 100 kbp     30.41     
+# indels per 100 kbp         3.57      
+Largest alignment            947055    
+Total aligned length         4732641   
+NA50                         460926    
+NGA50                        460926    
+NA90                         72132     
+NGA90                        72349     
+auNA                         466178.6  
+auNGA                        479672.2  
+LA50                         4         
+LGA50                        4         
+LA90                         15        
+LGA90                        14        
