@@ -38,9 +38,23 @@ Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (
 
 ## Results 
 
+#### Figure 1
 
+Assembly genome visualization  
 
+#### Figure 2
 
+IGV visualisation depicting the results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. 
+
+#### Figure 3
+
+IGV visualisation depicting the results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. Gifsy-2 prophage exodeoxyribonuclease gene (NP_459984.1) region is visible with variants highlighted in dark blue. 
+
+#### Figure 4
+
+![Image4](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure3IGV.png)
+
+IGV visualisation depicting the results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. The oxaloacetate decarboxylase alpha (NP_462262.1) and beta (NP_462261.1) chain genes are visible with variants highlighted in dark blue. 
 
 
 ## Discussion 
