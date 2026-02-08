@@ -38,15 +38,13 @@ Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (
 
 ## Results 
 
-#### Figure 1
-
-Assembly genome visualization  
+##### Figure 1: Assembly genome visualization  
 
 ![Image2](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure2IGV.png)
 
 ##### Figure 2: IGV visualisation depicting the results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. 
 
-![Image3](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure4IGV.png)
+![Image3](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure3IGV.png)
 
 ##### Figure 3: IGV visualisation depicting the results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. Gifsy-2 prophage exodeoxyribonuclease gene (NP_459984.1) region is visible with variants highlighted in dark blue. 
 
