@@ -55,9 +55,19 @@ High variability was also detected in the Gifsy-2 prophage exodeoxyribonuclease 
 
 Anaconda Inc. (2025). Miniconda (Version 25.11.1). Anaconda.
 
+Augagneur, Y., Garmyn, D., & Guzzo, J. (2008). Mutation of the oxaloacetate decarboxylase gene of Lactococcus lactis subsp. lactis impairs growth during citrate metabolism. Journal of Applied Microbiology, 104(1), 260–268. https://doi.org/10.1111/j.1365-2672.2007.03582.x
+
 De Coster, W., D’Hert, S., Schultz, D. T., Cruts, M., & Van Broeckhoven, C. (2018). NanoPack: Visualizing and processing long-read sequencing data. Bioinformatics, 34(15), 2666–2669. https://doi.org/10.1093/bioinformatics/bty149
 
+GitHub. (2024, July 1). Issue #214: Help choosing the appropriate Basecalling Models. GitHub.
+
 Hall MB, Wick RR, Judd LM, Nguyen AN, Steinig EJ, Xie O, Davies M, Seemann T, Stinear TP, Coin L. Benchmarking reveals superiority of deep learning variant callers on bacterial nanopore sequence data. Elife. 2024 Oct 10;13:RP98300. doi: 10.7554/eLife.98300 PMID: 39388235; PMCID: PMC11466455
+
+Ho, T. D., & Slauch, J. M. (2001). Characterization of grvA, an antivirulence gene on the Gifsy-2 phage in Salmonella enterica serovar Typhimurium. Journal of Bacteriology, 183(2), 611–620. https://doi.org/10.1128/JB.183.2.611-620.2001
+
+Howe, K., Chow, W., Collins, J., Pelan, S., Pointon, D. L., Sims, Y., Torrance, J., Tracey, A., & Wood, J. (2021). Significantly improving the quality of genome assemblies through curation. GigaScience, 10(1), giaa153. https://doi.org/10.1093/gigascience/giaa153
+
+HKU‑BAL. (n.d.). Clair3. GitHub. https://github.com/HKU-BAL/Clair3
 
 Kolmogorov, M., Yuan, J., Lin, Y., & Pevzner, P. A. (2019). Assembly of long, error-prone reads using repeat graphs. Nature Biotechnology, 37(5), 540–546. https://doi.org/10.1038/s41587-019-0072-8
 
@@ -69,11 +79,19 @@ Li, H. (2018). Minimap2: Pairwise alignment for nucleotide sequences. Bioinforma
 
 Lyu, N., Feng, Y., Pan, Y., Huang, H., Liu, Y., Xue, C., Zhu, B., & Hu, Y. (2021). Genomic characterization of Salmonella enterica isolates from retail meat in Beijing, China. Frontiers in Microbiology, 12, 636332. https://doi.org/10.3389/fmicb.2021.636332
 
+Medaka. (n.d.). medaka 1.6.1. PyPI. https://pypi.org/project/medaka/1.6.1/
+
 Oxford Nanopore Technologies. (2025). Medaka: Sequence correction provided by ONT Research (Version 2.2.0). GitHub.
 
 Robinson, J. T., Thorvaldsdóttir, H., Winckler, W., Guttman, M., Lander, E. S., Getz, G., & Mesirov, J. P. (2011). Integrative genomics viewer. Nature biotechnology, 29(1), 24–26. https://doi.org/10.1038/nbt.1754
 
 Sadasivan, H., Maric, M., Dawson, E., Iyer, V., Israeli, J., & Narayanasamy, S. (2023). Accelerating Minimap2 for Accurate Long Read Alignment on GPUs. Journal of biotechnology and biomedicine, 6(1), 13–23. https://doi.org/10.26502/jbb.2642-91280067
+
+swmedhyg. (n.d.). flye‑medaka shell‑script. GitHub. https://github.com/swmedhyg/flye-medaka_shell-script
+
+Tao, L., Wu, X., & Sun, B. (2010). Alternative sigma factor σH modulates prophage integration and excision in Staphylococcus aureus. PLoS Pathogens, 6(5), e1000888. https://doi.org/10.1371/journal.ppat.1000888
+
+WVdT. (n.d.). GroupA. HackMD. https://hackmd.io/@wvdt/groupA
 
 Zhao, W., Zeng, W., Pang, B., Luo, M., Peng, Y., Xu, J., Kan, B., Li, Z., & Lu, X. (2023). Oxford nanopore long-read sequencing enables the generation of complete bacterial and plasmid genomes without short-read sequencing. Frontiers in microbiology, 14, 1179966. https://doi.org/10.3389/fmicb.2023.1179966
 
