@@ -36,6 +36,21 @@ Variant calling between raw reads and the reference assembly was performed throu
 
 Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (Robinson et al., 2011) through the transfer of files locally. 
 
+## Results Visualizations
+
+
+
+
+
+
+## Discussion 
+
+The results of the de novo assembly achieved a genome fraction percentage of 95.39% as determined through QUAST analysis, when compared to the Salmonella enterica subsp. enterica serovar Typhimurium str. LT2 reference genome. The total aligned length was 4.73 Mb out of an assembled genome size of 5.09 Mb, compared to the reference size of 4.95 Mb. The assembly consisted of nine contigs, with the largest contig measuring 1.58 Mb and an N50 of 1.25 Mb. The presence of large contigs and a high N50 suggest high contiguity throughout the assembly. Assembly quality could potentially be improved by performing further rounds of polishing, or incorporating complementary short-read sequencing data to improve read errors (Howe et al., 2021). 
+  
+Variant calling using Clair3, followed by visualization in IGV, revealed substantial sequence variability in comparison to the reference genome. Prominent variants identified throughout the reads also aligned with the variability of bases identified by IGV in the readsref.sorted.bam file. High variability was observed in the oxaloacetate decarboxylase alpha (NP_462262.1) and beta (NP_462261.1) chain genes. The oxaloacetate decarboxylase (OAD) complex is involved in citrate fermentation and sodium transport in Salmonella. The presence of multiple SNPs and indels in this region suggests potential functional impacts, such as altered enzymatic activity due to missense or frameshift mutations, consistent with observations in other bacteria like Lactococcus lactis (Augagneur et al., 2008).
+
+High variability was also detected in the Gifsy-2 prophage exodeoxyribonuclease gene (NP_459984.1). Gifsy-2 is a bacterioprophage that impacts Salmonella enterica virulence (Ho & Slauch, 2002). Prophage regions are often highly variable and may carry genes that enhance host survival and adaptability (Tao et al., 2010). The read coverage for this region was low in areas with the highest variability, which could lead to an incorrect increase in detection of variants by clair3. Further experimental study would need to be conducted in order to identify the impact of said variant data. Overall, the assembly demonstrates high completeness, while the variant calling analysis identified variability between the raw reads and the reference genome. 
+
 ## References
 
 Anaconda Inc. (2025). Miniconda (Version 25.11.1). Anaconda.
