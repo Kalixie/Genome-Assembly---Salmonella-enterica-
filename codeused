@@ -1,4 +1,3 @@
-
 # Setup Conda Environments
 
 conda create -n nanoplot nanoplot=1.46.2 nanopack=1.1.1 -y
