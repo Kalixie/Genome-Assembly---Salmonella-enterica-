@@ -42,7 +42,7 @@ Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (
 
 ![Image2](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure2IGV.png)
 
-##### Figure 2: IGV visualisation depicting the results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. 
+##### Figure 2: IGV visualisation depicting the full results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. 
 
 ![Image3](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure3IGV.png)
 
