@@ -1,0 +1,24 @@
+##fileformat=VCFv4.2
+##source=Clair3
+##clair3_version=1.2.0
+##cmdline=/home/nadira/miniconda3/envs/clair/bin/run_clair3.sh --bam_fn readsref.sorted.bam --ref_fn samref.fasta --output clair3output --threads 16 --platform ont --model_path /home/nadira/miniconda3/envs/clair/bin/models/ont --include_all_ctgs
+##reference=/home/nadira/BINF6110/assignment1/samref.fasta
+##FILTER=<ID=PASS,Description="All filters passed">
+##FILTER=<ID=LowQual,Description="Low quality variant">
+##FILTER=<ID=RefCall,Description="Reference call">
+##INFO=<ID=P,Number=0,Type=Flag,Description="Result from pileup calling">
+##INFO=<ID=F,Number=0,Type=Flag,Description="Result from full-alignment calling">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads 1. with MQ below 5 or an user-specified threshold, or 2. selected by 'samtools view -F 2316', are filtered)">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##FORMAT=<ID=AF,Number=A,Type=Float,Description="Observed allele frequency in reads, for each ALT allele, in the same order as listed, or the REF allele for a RefCall">
+##contig=<ID=NC_003197.2,length=4857450>
+##contig=<ID=NC_003277.2,length=93933>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE
+NC_003277.2	21900	.	G	A	14.91	PASS	P	GT:GQ:DP:AD:AF	0/1:14:6:2,3:0.5000
+NC_003277.2	54016	.	C	G	11.08	PASS	P	GT:GQ:DP:AD:AF	0/1:11:354:80,261:0.7373
+NC_003277.2	54116	.	T	A	8.15	PASS	P	GT:GQ:DP:AD:AF	0/1:8:364:88,242:0.6648
+NC_003277.2	54272	.	C	A	12.20	PASS	P	GT:GQ:DP:AD:AF	0/1:12:377:174,186:0.4934
+NC_003277.2	54273	.	G	A	8.06	PASS	P	GT:GQ:DP:AD:AF	0/1:8:377:97,276:0.7321

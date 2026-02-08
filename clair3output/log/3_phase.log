@@ -1,0 +1,49 @@
+This is WhatsHap 2.8 running under Python 3.10.19
+Working on 1 sample from 1 family
+
+# Working on contig NC_003277.2 in individual SAMPLE
+Found 5 usable heterozygous variants (0 skipped due to missing genotypes)
+Number of supplementary alignments: 0
+Number of non-singleton groups: 0
+Skipped 0 groups
+Found 374 reads covering 5 variants
+Kept 369 reads that cover at least two variants each
+Selected 15 most phase-informative reads covering 4 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 2 variants (50.0% of accessible variants) between position 54016 and 54272
+Changed 2 genotypes while writing VCF
+
+# Resource usage
+Maximum memory usage: 0.045 GB
+Time spent reading BAM/CRAM:                    0.2 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.4 s
+Total elapsed time:                             0.7 s
+This is WhatsHap 2.8 running under Python 3.10.19
+Working on 1 sample from 1 family
+
+# Working on contig NC_003197.2 in individual SAMPLE
+Found 192 usable heterozygous variants (0 skipped due to missing genotypes)
+Number of supplementary alignments: 0
+Number of non-singleton groups: 0
+Skipped 0 groups
+Found 2875 reads covering 192 variants
+Kept 2574 reads that cover at least two variants each
+Selected 125 most phase-informative reads covering 190 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 71 variants (37.4% of accessible variants) between position 2763434 and 2773471
+
+# Resource usage
+Maximum memory usage: 0.062 GB
+Time spent reading BAM/CRAM:                    3.5 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.2 s
+Time spent phasing:                             0.6 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.4 s
+Total elapsed time:                             4.7 s
