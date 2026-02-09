@@ -6,7 +6,7 @@
 # See README.md for dependency requirements
 
 
-# Setup Conda Enviroments (Run once)
+# Setup Conda Environments (Run once)
 
 conda create -n nanoplot nanoplot=1.46.2 nanopack=1.1.1 -y
 
@@ -56,7 +56,7 @@ samtools sort comparisonalign.bam -o comparisonalign.sorted.bam
 
 samtools index comparisonalign.sorted.bam
 
-# Quast on assembly and refeerence
+# Quast on assembly and reference
 
 conda activate quast
 
