@@ -26,11 +26,11 @@ Polishing was done through the use of Medaka (v. 2.1.1) (Oxford Nanopore Technol
 
 ### Genome Alignment
 
-In order to align the assembled genome to the reference, minimap2 was used with the `-ax asm5` flag (v. 2.30), the alignments were then converted to BAM using samtools (v. 1.23) (Li, 2018);(Li et al., 2009). 
+In order to align the assembled genome to the reference, minimap2 was used with the `-ax asm5` flag (v. 2.30) and with the `map-ont` flag for read mapping to the reference genome; the alignments were then converted to BAM using samtools (v. 1.23) (Li, 2018);(Li et al., 2009). 
 
 ### Variant Calling
 
-Variant calling between raw reads and the reference assembly was performed through the usage of clair3 (v. 1.20) installed through miniconda for further analysis of the reads (Zheng et al., 2022). 
+Variant calling between raw reads and the reference assembly was performed through the usage of clair3 with the `--include_all_ctgs` flag to include bacterial chromosomes (v. 1.20) installed through miniconda for further analysis of the reads (Zheng et al., 2022). 
 
 ### Result Visualisation and Analysis
 
