@@ -38,7 +38,9 @@ Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (
 
 ## Results 
 
-##### Figure 1: Assembly genome visualization  
+![Image1](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure1IGV.png)
+
+##### Figure 1: Circular visualization of the assembled Salmonella enterica genome generated using Proksee. The assembly spans approximately 5 Mbp, consistent with the expected genome size for Salmonella enterica. Contig boundaries are shown, indicating a largely contiguous assembly.
 
 ![Image2](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure2IGV.png)
 
