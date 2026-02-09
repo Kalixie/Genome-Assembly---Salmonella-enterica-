@@ -8,25 +8,25 @@ Genome assembly can pose challenges such as ensuring accuracy with genome constr
 
 A quality control tool was chosen to identify the condition of the raw Nanopore reads before further assembly and analysis were conducted. NanoPack was chosen due to its specific purpose of processing Nanopore reads, along with the inclusion of Nanoplot for data analysis (De Coster, 2018). A recent study looking at the use of Oxford nanopore long-read sequencing for genome assembly found that for a 5 Mb bacterial genome, accuracies of over 99.99% were achieved through the usage of Flye and Medaka for assembly and polishing (Zhao et al., 2023). Another study looking at the Salmonella enterica genome across 341 strains found that the average lengths of genomes ranged from 4.50 to 5.15 Mb, within the range of 5 Mb for high accuracy scores through Flye and Medaka (Lyu et al., 2021). Therefore, the combination of Flye and Medaka was considered for this project. Other assembly tools, such as Canu and NECAT, also deliver accurate results in comparison studies, however potentially lead to slower processing times (Kumar et al., 2025). Minimap2 was chosen as the aligner for this project as it is considered to be high-performance for Nanopore reads, although studies have identified potential improvements for speed (Sadasivan, 2023). Clair3, a deep learning tool designed for long-read sequencing data, was used to perform variant calling and has performed highly in previous studies compared to previous techniques (Hall et al., 2024). Overall, this approach aims to provide a practical pipeline for comparing assembled and referenced genomes. 
 
-## Proposed Methods
+## Methods
 
 ### Read Acquisition 
 
-The data collected from NCBI contained Nanopore long-reads in the FASTQ format. Further analysis was conducted on the Compute Canada Fir cluster. Assembly and analysis tools were installed through the miniconda (v. 25.11.1) package manager through the Ubuntu terminal. A complete Salmonella enterica reference genome was retrieved from the NCBI database and used for alignment. 
+Nanopore long-read sequencing data in FASTQ format were obtained from the NCBI Sequence Read Archive (SRA). Analyses were conducted on the Compute Canada Fir cluster. Assembly and analysis tools were installed through the miniconda (v. 25.11.1) package manager within a Ubuntu environment. Salmonella enterica reference genome (GCF_000006945.2) (https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000006945.2/) was obtained from the NCBI through FTP and used for downstream alignment and variant analysis 
 
 ### Read Processing
 
-Raw Nanopore reads were assessed for quality using NanoPlot (v. 1.46.2) with parameter `--fastq` (De Coster et al., 2018). Nanopack (v. 1.1.1) was used for further read edits as necessary (De Coster et al., 2018). 
+Raw Nanopore reads were assessed for quality using NanoPlot (v. 1.46.2) with the parameter `--fastq` to indicate file type (De Coster et al., 2018). Nanopack (v. 1.1.1) was installed for read processing support however no additional read filtering was deemed necessary before assembly.
 
 ### Genome Assembly and Polishing 
 
-Genome assembly was performed through the use of Flye and default parameters (v. 2.9.6) (Kolmogorov et al., 2019). 
+De novo genome assembly was performed using Flye (v. 2.9.6) with default parameters optimized for Nanopore long reads `--nano-raw` (Kolmogorov et al., 2019). 
 
-Polishing was done through the use of Medaka (v. 2.1.1) (Oxford Nanopore Technologies, 2025). 
+The resulting assembly was polished using Medaka (v. 2.1.1) with the model `r1041_e82_400bps_sup_v5.2.0` to improve consensus accuracy based on the original raw reads (Oxford Nanopore Technologies, 2025).
 
 ### Genome Alignment
 
-In order to align the assembled genome to the reference, minimap2 was used with the `-ax asm5` flag (v. 2.30) and with the `map-ont` flag for read mapping to the reference genome; the alignments were then converted to BAM using samtools (v. 1.23) (Li, 2018);(Li et al., 2009). 
+In order to align the assembled genome to the reference, minimap2 was used with the `-ax asm5` flag (v. 2.30) and with the `map-ont` flag for read mapping to the reference genome; the alignments were then converted to BAM using samtools then further converted to sorted, and indexed (v. 1.23) (Li, 2018);(Li et al., 2009). 
 
 ### Variant Calling
 
@@ -34,7 +34,9 @@ Variant calling between raw reads and the reference assembly was performed throu
 
 ### Result Visualisation and Analysis
 
-Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (Robinson et al., 2011) through the transfer of files locally. Additional assembled genome visualisation was performed through the use of Proksee (Grant et al., 2023). QUAST (v. 5.3.0) was used to generate statistics based on the assembly and reference genome (Gurevich et al., 2013).
+QUAST (v. 5.3.0) was used to generate statistics based on the assembly and reference genome (Gurevich et al., 2013). Additional assembled genome visualisation was performed through the use of Proksee (Grant et al., 2023).
+
+Aligned reads and variant calls were visualized using Integrative Genomics Viewer (IGV) (v. 2.19.7) to manually inspect coverage patterns and variant regions through the use of the UCSC genark (Clawson et al., 2023), annotated GCF_000006945.2 genome (Robinson et al., 2011). 
 
 ## Results 
 
@@ -68,6 +70,8 @@ High variability was also detected in the Gifsy-2 prophage exodeoxyribonuclease 
 Anaconda Inc. (2025). Miniconda (Version 25.11.1). Anaconda.
 
 Augagneur, Y., Garmyn, D., & Guzzo, J. (2008). Mutation of the oxaloacetate decarboxylase gene of Lactococcus lactis subsp. lactis impairs growth during citrate metabolism. Journal of Applied Microbiology, 104(1), 260–268. https://doi.org/10.1111/j.1365-2672.2007.03582.x
+
+Clawson, H., Lee, B. T., Raney, B. J., Barber, G. P., Casper, J., Diekhans, M., Fischer, C., Gonzalez, J. N., Hinrichs, A. S., Lee, C. M., Nassar, L. R., Perez, G., Wick, B., Schmelter, D., Speir, M. L., Armstrong, J., Zweig, A. S., Kuhn, R. M., Kirilenko, B. M., Hiller, M., … Haeussler, M. (2023). GenArk: towards a million UCSC genome browsers. Genome biology, 24(1), 217. https://doi.org/10.1186/s13059-023-03057-x
 
 De Coster, W., D’Hert, S., Schultz, D. T., Cruts, M., & Van Broeckhoven, C. (2018). NanoPack: Visualizing and processing long-read sequencing data. Bioinformatics, 34(15), 2666–2669. https://doi.org/10.1093/bioinformatics/bty149
 
