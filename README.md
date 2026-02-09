@@ -44,11 +44,11 @@ Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (
 
 ![Image2](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure2IGV.png)
 
-##### Figure 2: IGV visualisation depicting the full results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. 
+##### Figure 2: IGV visualisation depicting the full aligned raw reads with clair3 variant calling analysis results under merge_output.vcf.gz, including read coverage as readsref.sorted.bam. 
 
 ![Image3](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure3IGV.png)
 
-##### Figure 3: IGV visualisation depicting the results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. Gifsy-2 prophage exodeoxyribonuclease gene (NP_459984.1) region is visible with variants highlighted in dark blue. 
+##### Figure 3: IGV visualisation depicting the results from the clair3 variant calling analysis as merge_output.vcf.gz, and the raw reads aligned to the reference genome, including coverage as readsref.sorted.bam. Gifsy-2 prophage exodeoxyribonuclease gene (NP_459984.1) region is visible with variants highlighted in dark blue. Read coverage appears to be low in highly variant regions.
 
 ![Image4](https://github.com/Kalixie/Genome-Assembly---Salmonella-enterica-/blob/main/Visualizations/Figure4IGV.png)
 
@@ -57,7 +57,7 @@ Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (
 
 ## Discussion 
 
-The results of the de novo assembly achieved a genome fraction percentage of 95.39% as determined through QUAST analysis, when compared to the Salmonella enterica subsp. enterica serovar Typhimurium str. LT2 reference genome. The total aligned length was 4.73 Mb out of an assembled genome size of 5.09 Mb, compared to the reference size of 4.95 Mb. The assembly consisted of nine contigs, with the largest contig measuring 1.58 Mb and an N50 of 1.25 Mb. The presence of large contigs and a high N50 suggest high contiguity throughout the assembly. Assembly quality could potentially be improved by performing further rounds of polishing, or incorporating complementary short-read sequencing data to improve read errors (Howe et al., 2021). 
+The results of the de novo assembly achieved a genome fraction percentage of 95.39% as determined through QUAST analysis, when compared to the Salmonella enterica subsp. enterica serovar Typhimurium str. LT2 reference genome. The total aligned length was 4.73 Mb out of an assembled genome size of 5.09 Mb, compared to the reference size of 4.95 Mb. The assembly consisted of nine contigs, with the largest contig measuring 1.58 Mb and an N50 of 1.25 Mb. The presence of large contigs and a high N50 suggests high contiguity throughout the assembly. Assembly quality could potentially be improved by performing further rounds of polishing throughout analysis, or incorporating complementary short-read sequencing data to improve read errors (Howe et al., 2021). 
   
 Variant calling using Clair3, followed by visualization in IGV, revealed substantial sequence variability in comparison to the reference genome. Prominent variants identified throughout the reads also aligned with the variability of bases identified by IGV in the readsref.sorted.bam file. High variability was observed in the oxaloacetate decarboxylase alpha (NP_462262.1) and beta (NP_462261.1) chain genes with various synonymous and nonsynonymous substitutions. The oxaloacetate decarboxylase (OAD) complex is involved in citrate fermentation and sodium transport in Salmonella. The presence of multiple SNPs and indels in this region suggests potential functional impacts, such as altered enzymatic activity due to missense or frameshift mutations, consistent with observations in other bacteria like Lactococcus lactis (Augagneur et al., 2008).
 
