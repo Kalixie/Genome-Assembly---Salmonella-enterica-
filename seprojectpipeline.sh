@@ -1,4 +1,12 @@
-# Setup Conda Environments
+#!/bin/bash
+
+# seprojectpipeline.sh
+# Nadira Robertson
+
+# See README.md for dependency requirements
+
+
+# Setup Conda Enviroments (Run once)
 
 conda create -n nanoplot nanoplot=1.46.2 nanopack=1.1.1 -y
 
@@ -48,7 +56,7 @@ samtools sort comparisonalign.bam -o comparisonalign.sorted.bam
 
 samtools index comparisonalign.sorted.bam
 
-# Quast on assembly and reference
+# Quast on assembly and refeerence
 
 conda activate quast
 
@@ -58,9 +66,9 @@ quast medakapolish/consensus.fasta -r samref.fasta -o quastresults
 
 conda activate minisam
 
-minimap2 -ax map-ont samref.fasta SRR32410565.fastq
+minimap2 -ax map-ont samref.fasta SRR32410565.fastq > readsref.sam
 
-samtools sort SRR32410565.fastq -o readsref.sorted.bam
+samtools sort -o readsref.sorted.bam readsref.sam
 
 samtools index readsref.sorted.bam
 
