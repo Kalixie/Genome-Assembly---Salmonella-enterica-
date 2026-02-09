@@ -34,7 +34,7 @@ Variant calling between raw reads and the reference assembly was performed throu
 
 ### Result Visualisation and Analysis
 
-Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (Robinson et al., 2011) through the transfer of files locally. QUAST (v. 5.3.0) was used to generate statistics based on the assembly and reference genome (Gurevich et al., 2013).
+Aligned reads were visualized in Integrative Genomics Viewer (IGV) (v. 2.19.7) (Robinson et al., 2011) through the transfer of files locally. Additional assembled genome visualisation was performed through the use of Proksee (Grant et al., 2023). QUAST (v. 5.3.0) was used to generate statistics based on the assembly and reference genome (Gurevich et al., 2013).
 
 ## Results 
 
@@ -72,6 +72,8 @@ Augagneur, Y., Garmyn, D., & Guzzo, J. (2008). Mutation of the oxaloacetate deca
 De Coster, W., D’Hert, S., Schultz, D. T., Cruts, M., & Van Broeckhoven, C. (2018). NanoPack: Visualizing and processing long-read sequencing data. Bioinformatics, 34(15), 2666–2669. https://doi.org/10.1093/bioinformatics/bty149
 
 GitHub. (2024, July 1). Issue #214: Help choosing the appropriate Basecalling Models. GitHub.
+
+Grant, J. R., Enns, E., Marinier, E., Mandal, A., Herman, E. K., Chen, C., Graham, M., Van Domselaar, G., & Stothard, P. (2023). Proksee: In-depth characterization and visualization of bacterial genomes. Nucleic Acids Research, 51(W1), W484–W492. https://doi.org/10.1093/nar/gkad326
 
 Gurevich, A., Saveliev, V., Vyahhi, N., & Tesler, G. (2013). QUAST: quality assessment tool for genome assemblies. Bioinformatics (Oxford, England), 29(8), 1072–1075. https://doi.org/10.1093/bioinformatics/btt086
 
